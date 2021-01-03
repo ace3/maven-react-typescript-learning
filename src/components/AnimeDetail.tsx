@@ -20,6 +20,7 @@ function AnimeDetail(props:Props) {
       <h6>Episodes: {item.episodes ===null? "TBA": item.episodes}</h6>
       <h6>Durations: {item.duration}</h6>
       <h6>Rating: {item.rating}</h6>
+      <p>{item.synopsis}</p>
     </div>
     </>
   )

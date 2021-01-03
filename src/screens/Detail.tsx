@@ -7,8 +7,11 @@ import {RouteComponentProps} from 'react-router-dom';
 import {axios}from '../services';
 import {url} from '../constants';
 
-type TParams = {id:string};
-function Detail(props:RouteComponentProps<TParams>) {
+interface Props extends RouteComponentProps<{id:string}>{
+  
+}
+
+function Detail(props:Props) {
 const mal_id = props.match.params.id;
   const [item, setItem] = useState<AnimeDetailType|null>(null)
   useEffect(() => {
@@ -25,12 +28,11 @@ const mal_id = props.match.params.id;
   }, [mal_id])
 
   if(item ===null) return (<div className="flex justify-center align-center items-center w-full h-full"><Loader
-         type="Puff"
-         color="#00BFFF"
-         height={100}
-         width={100}
+type="Puff"
+color="#00BFFF"
+height={100}
+width={100}
          timeout={3000} //3 secs
- 
       /></div>)
   return (
     <div>
