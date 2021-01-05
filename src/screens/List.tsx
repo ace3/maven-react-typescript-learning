@@ -34,7 +34,7 @@ function List() {
       /></div>)
 
   return (
-    <div className="container justify-center">
+    <div className="container mx-auto">
       <p>Upcoming Anime List</p>
 
 {

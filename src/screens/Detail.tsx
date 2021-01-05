@@ -35,7 +35,7 @@ width={100}
          timeout={3000} //3 secs
       /></div>)
   return (
-    <div>
+    <div className="container mx-auto">
       {item !==null && (<AnimeDetail item={item}/>)}
     </div>
   )
